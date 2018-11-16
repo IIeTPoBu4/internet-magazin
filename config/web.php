@@ -7,6 +7,7 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'language' => 'ru-Ru',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -65,6 +66,7 @@ if (YII_ENV_DEV) {
         // uncomment the following to add your IP if you are not connecting from localhost.
         //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
+    $config['modules']['debug']['allowedIPs'] = ['*'];
 
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
